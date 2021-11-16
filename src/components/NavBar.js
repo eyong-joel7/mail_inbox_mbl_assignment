@@ -6,9 +6,9 @@ import { logOut } from "../redux/actions/authedUser";
 const NavBar = ({ inboxMessages, user, dispatch }) => {
   let numUnread = 0;
 
-  if (inboxMessages) {
+  if (inboxMessages && inboxMessages.length>0) {
     const unRead = inboxMessages.filter((message) => message.isRead !== true);
-    numUnread = unRead.length;
+    numUnread = unRead?.length;
   }
   return (
     <nav className="nav">
