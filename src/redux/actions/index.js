@@ -1,4 +1,4 @@
-import axios from "axios";
+import Axios from 'axios';
 import {
   GET_MESSAGES_FAIL,
   GET_MESSAGES_REQUEST,
@@ -20,7 +20,7 @@ export const getAllMessages = () => async (dispatch) => {
   });
 
   try {
-    const { data } = await axios.get("/api/messages/");
+    const { data } = await Axios.get("/api/messages/");
     dispatch({
       type: GET_MESSAGES_SUCCESS,
       payload: data,
@@ -43,7 +43,7 @@ dispatch({
   payload:null
 })
 try {
-  const {data}  = await axios.put(`/api/messages/${id}`);
+  const {data}  = await Axios.put(`/api/messages/${id}`);
   dispatch({
     type: UPDATE_MESSAGE_SUCCESS,
     payload: data,
@@ -64,7 +64,7 @@ dispatch({
   payload:null
 })
 try {
-  const {data}  = await axios.delete(`/api/messages/${id}`);
+  const {data}  = await Axios.delete(`/api/messages/${id}`);
   dispatch({
     type: DELETE_MESSAGE_SUCCESS,
     payload: data,
@@ -87,7 +87,7 @@ export const sendMessage = ({name, content, subject}) => async (dispatch) => {
   });
 
   try {
-    const {data} = await axios.post('api/messages', {name, content, subject})
+    const {data} = await Axios.post('api/messages', {name, content, subject})
     dispatch({
       type: SEND_MESSAGE_SUCCESS,
       payload: data,
