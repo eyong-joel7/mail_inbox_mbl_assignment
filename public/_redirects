@@ -1,1 +1,3 @@
+
+/api/* https://mail-inbox-mbl-assignment.herokuapp.com/api/:splat 200
 /* /index.html 200
