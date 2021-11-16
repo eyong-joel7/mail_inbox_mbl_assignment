@@ -29,6 +29,7 @@ history('/');
   return (
     <div className="container">
       <div className="wrapper">
+        <h1>LOGIN</h1>
         <form onSubmit={(e) => submitHandler(e)} className="form">
         {
             error && <div className = 'error'>Unable to Login, {error}</div>

@@ -48,7 +48,7 @@ function mapStateToProps({ messages,users }) {
   const { messages: inboxMessages } = messages;
   return {
     inboxMessages,
-    user: users.user || localStorage.getItem('MBL_USER_INFO')? JSON.parse(localStorage.getItem('MBL_USER_INFO')) : null,
+    user: users.user || JSON.parse(localStorage.getItem('MBL_USER_INFO')),
   };
 }
 export default connect(mapStateToProps)(MessageDetail);

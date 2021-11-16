@@ -24,7 +24,7 @@ function mapStateToProps({ messages, users }) {
   return {
     numMessages: inboxMessages? inboxMessages.length : 0,
     numUnread: unRead?.length,
-    user: users.user || localStorage.getItem('MBL_USER_INFO')? JSON.parse(localStorage.getItem('MBL_USER_INFO')) : null,
+    user: users.user || JSON.parse(localStorage.getItem('MBL_USER_INFO')),
   };
 }
 export default connect(mapStateToProps)(HomePage);

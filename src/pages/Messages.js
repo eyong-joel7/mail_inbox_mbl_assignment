@@ -53,7 +53,7 @@ function mapStateToProps({ messages, users }) {
     inboxMessages: inboxMessages?.sort(
       (a, b) => timeStampToUnix(b.createdAt) - timeStampToUnix(a.createdAt)
     ),
-    user: users.user || localStorage.getItem('MBL_USER_INFO')? JSON.parse(localStorage.getItem('MBL_USER_INFO')) : null,
+    user: users.user || JSON.parse(localStorage.getItem('MBL_USER_INFO')),
   };
 }
 export default connect(mapStateToProps)(Messages);
