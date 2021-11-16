@@ -116,8 +116,17 @@ li {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 50px;
 }
-
+ @media screen and (max-width:768px) {
+     .content {
+         padding: 0 10px;
+     }
+    
+}
 
 
 .delete {
@@ -128,6 +137,7 @@ li {
     align-items: center;
     justify-content: flex-end;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .btn {

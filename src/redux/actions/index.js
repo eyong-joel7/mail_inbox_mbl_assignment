@@ -20,7 +20,7 @@ export const getAllMessages = () => async (dispatch) => {
   });
 
   try {
-    const { data } = await axios.get("/api/message/");
+    const { data } = await axios.get("/api/messages/");
     dispatch({
       type: GET_MESSAGES_SUCCESS,
       payload: data,
@@ -43,7 +43,7 @@ dispatch({
   payload:null
 })
 try {
-  const {data}  = await axios.put(`/api/message/${id}`);
+  const {data}  = await axios.put(`/api/messages/${id}`);
   dispatch({
     type: UPDATE_MESSAGE_SUCCESS,
     payload: data,
@@ -64,7 +64,7 @@ dispatch({
   payload:null
 })
 try {
-  const {data}  = await axios.delete(`/api/message/${id}`);
+  const {data}  = await axios.delete(`/api/messages/${id}`);
   dispatch({
     type: DELETE_MESSAGE_SUCCESS,
     payload: data,
