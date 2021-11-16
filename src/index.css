@@ -11,6 +11,9 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+a {
+    text-decoration: none;
+}
 .nav {
 position: relative;
 margin-top: 0;
@@ -95,6 +98,13 @@ li {
     padding:20px;
     margin: auto;
 }
+@media screen and (max-width:768px) {
+    .wrapper {
+        max-width: 95%;
+        padding: 10px;
+    }
+    
+}
  
 .avatar {
     border: 2px solid #1f1f1f;
@@ -119,7 +129,7 @@ li {
     cursor: pointer;
     width: 100%;
     overflow: hidden;
-    padding: 0 50px;
+    padding: 0 30px;
 }
  @media screen and (max-width:768px) {
      .content {
